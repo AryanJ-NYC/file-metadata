@@ -6,7 +6,7 @@ const express = require('express'),
 
 router.use(express.static('./public'));
 
-router.post('/get-file-size', upload.single('test'), function(req, res) {
+router.post('/get-file-size', upload.single('file'), function(req, res) {
   res.json({ size: req.file.size });
 });
 
